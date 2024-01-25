@@ -1,5 +1,5 @@
 // Dit zijn de custom dimensions, niet sessie-gerelateerd.
-// NB: deze lijst is overgenomen uit aansluitgids en moeten we nog even nalopen: wat is hiervan een session dimension en wat niet?
+// NB: moeten we nog even nalopen: wat is hiervan een session dimension en wat niet?
 export enum PiwikDimension {
   /** Gebruikerstype (al gebruikt door mijn.amsterdam als ProfileType) */
   userType = 1,
@@ -35,6 +35,7 @@ export enum PiwikDimension {
   searchMachine = 16,
   /** Pagina type o.b.v. Amsterdam Content Meetmodel */
   pageType = 17,
+  // ... wordt nog aangevuld
 }
 
 // We definieren de session dimensions apart, zodat we snappen wat we aan het loggen zijn.
@@ -42,10 +43,10 @@ export enum PiwikSessionDimension {
   reduceMotionEnabled = 20,
   locationPermission = 21,
   screenReaderEnabled = 22,
+  // ... wordt nog aangevuld
 }
 
-
-// In de app hebben we modules. We gebruiken categorie om aan te geven bij welke module een log hoort.
+// In de app hebben we modules. We gebruiken de categorie om aan te geven bij welke module een log hoort.
 // Voor zaken die niet onder een module vallen, gebruiken we "general".
 export enum PiwikCategory {
   about = 'about',
@@ -63,10 +64,11 @@ export enum PiwikCategory {
   wasteGuide = 'waste-guide',
 }
 
-// De acties die een log kunnen triggeren (wordt nog aangevuld).
+// De acties die een log kunnen triggeren.
 export enum PiwikAction {
   addressAdd = 'addressAdd',
   addressChange = 'addressChange',
   buttonPress = 'buttonPress',
   toForeground = 'toForeground',
+  // ... wordt nog aangevuld
 }
